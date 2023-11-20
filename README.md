@@ -50,6 +50,14 @@ Maybe you need a proxy:
 brickhauler --uri https://example.com --concurrent 2 --request 4 --proxy "http://43.123.54.1:8080/" --feed
 ```
 
+## Installation
+
+Manual installation for linux systems (amd64)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/EsteveSegura/BrickHauler/main/install.sh)"
+```
+
 ## Features
 
 - Ability to choose the HTTP method for making requests.
