@@ -22,7 +22,6 @@ do
 
     env GOOS=$GOOS GOARCH=$GOARCH go build -o ./bin/$output_name $package
     if [ $? -ne 0 ]; then
-           echo 'An error has occurred! Aborting the script execution...'
-        exit 1
+        echo "Warning: Failed to build for $GOOS/$GOARCH. Continuing with other platforms..."
     fi
 done

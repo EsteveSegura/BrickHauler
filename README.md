@@ -23,31 +23,31 @@ Parameters accepted by the command line:
 Here's the example you're probably looking for to understand how this tool works:
 
 ```bash
-go run . --uri https://example.com --concurrent 2 --request 4 --feed
+go run ./cmd/brickhauler --uri https://example.com --concurrent 2 --request 4 --feed
 ```
 
 Do you want to use another http verb?
 
 ```bash
-go run . --verb POST --uri https://example.com --concurrent 2 --request 4 --feed
+go run ./cmd/brickhauler --verb POST --uri https://example.com --concurrent 2 --request 4 --feed
 ```
 
 Need to add a cookie? Here's how:
 
 ```bash
-go run . --uri https://example.com --concurrent 2 --request 4 --cookie "foo=bar" --feed
+go run ./cmd/brickhauler --uri https://example.com --concurrent 2 --request 4 --cookie "foo=bar" --feed
 ```
 
 Need to add multiple cookies? It's just as simple:
 
 ```bash
-go run . --uri https://example.com --concurrent 2 --request 4 --cookie "foo=bar" --cookie "root=toor" --feed
+go run ./cmd/brickhauler --uri https://example.com --concurrent 2 --request 4 --cookie "foo=bar" --cookie "root=toor" --feed
 ```
 
 Maybe you need a proxy:
 
 ```bash
-go run . --uri https://example.com --concurrent 2 --request 4 --proxy "http://43.123.54.1:8080/" --feed
+go run ./cmd/brickhauler --uri https://example.com --concurrent 2 --request 4 --proxy "http://43.123.54.1:8080/" --feed
 ```
 
 ## Features
@@ -66,5 +66,11 @@ To generate binaries for the main operating systems, we must execute the followi
 
 ```bash
 chmod +x ./build.sh
-sudo ./build.sh ./cmd/main.go
+./build.sh ./cmd/brickhauler
+```
+
+Or to build a single binary:
+
+```bash
+go build -o ./bin/brickhauler ./cmd/brickhauler
 ```
